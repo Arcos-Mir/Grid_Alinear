@@ -1,0 +1,31 @@
+.contenedor {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    
+    /*alinear hozontalmente*/
+    /*justify-items: start;/*acomodar un elemento de forma horizontal ocupando solo el espacio
+    que necesita el elemento*/
+    /*justify-items: auto; abarca todo el espacio disponible*/
+    /*justify-items: stretch;similar a la de auto*/
+    justify-items: center;
+    /*justify-items: end;*/
+    
+    /*alinear verticalmente*/
+    /*align-items: start;*/
+    align-items: center;
+    /*align-items: end;*/
+    /*align-items: stretch;*/
+}
+
+.contenedor .item {
+    background: #ff8000;
+    /*width: 100%; no utilizar ya que no respeta el grid-gap( el espacio)*/
+    justify-self: stretch;/*abarca el 100% del espacio disponible y respeta el espacio
+    entre las celdas el grid-gap*/
+    /*align-self: end; lo coloca al final del espacio disponible
+    align-self: start; lo coloca al inicio del espacio disponible
+    align-self: center; centra el objeto*/
+    align-self: stretch;/*ocupa todo el espacio disponible */
+}
